@@ -25,7 +25,92 @@ class Dateprofile {
 const card1 = new Dateprofile('Peter', 23, 'bin ein alter Maier', 'Hallo, darf ich dir einen Kuchen kaufen', [`Peter answer 1`, `Peter answer 2`], [`Peter reaction 1`, `Peter reaction 2`]);
 const card2 = new Dateprofile('Alice', 99, 'LF wine and dine', 'Hallöchen mein lieber', [`Alice answer 1`,`Alice answer 2`], [`Alice reaction 1`, `Alice reaction 2`]);
 const card3 = new Dateprofile('Blümchen', 44, 'Ich bin eine Blume', 'Hi, bist du eine Biene?', [`Blümchen answer 1`,`Blümchen answer 2`], [`Blümchen reaction 1`, `Blümchen reaction 2`]);
-const cardArr = [card1, card2, card3];
+const cardArr = [
+    { // Profile Information Peter
+      name: 'Peter',
+      age: 23,
+      bio: 'bin ein alter Maier',
+      // Profile converstions Peter
+      conversations: [
+        { // Peter Conversation 1
+          dateAnswer: 'Guten Tag, darf ich dir einen Kuchen kaufen?',
+          userAnswers: [
+            {
+            userAnswer: 'Ja',
+            dateReaction: 'Das freut mich!'
+            },
+            {
+            userAnswer: 'Nein',
+            dateReaction: 'Wieso? Bist du ein Arschloch?'
+            },
+            {
+            userAnswer: 'Ich backe ihn lieber selbst',
+            dateReaction: 'Du kannst mich gerne mal backen'
+            }
+          ]
+        },
+        { // Peter Conversation 2
+          dateAnswer: 'Was ist dein Lieblingskuchen?',
+          userAnswers: [
+            {
+            userAnswer: 'Cheesecake',
+            dateReaction: 'Uhh'
+            },
+            {
+            userAnswer: 'Apple Pie',
+            dateReaction: "You're the apple of my eye"
+            },
+            {
+            userAnswer: 'Cream Pie',
+            dateReaction: '🙊'
+            }
+          ]
+        }
+      ]
+    }, // Profile Information Alice
+    { name: 'Alice',
+      age: 44,
+      bio: 'I want to wine and dine like a swine',
+      conversations: [
+        { // Alice Conversation 1
+          dateAnswer: 'Hello dear, you look tasty',
+          userAnswers: [
+            {
+            userAnswer: 'You look like shit',
+            dateReaction: "Uhhmm.. that turns me on, shit"
+            },
+            {
+            userAnswer: 'Hi, nice to meet you Alice!',
+            dateReaction: 'So.. what do you do on weekends like these?'
+            },
+            {
+            userAnswer: 'Want to have a bite ;)?',
+            dateReaction: 'Ew no, I was talking about the bacon in the background of your picture'
+            }
+          ]
+        },
+        { // Alice Converstaion 2
+          dateAnswer: 'Was ist dein Lieblingskuchen?',
+          userAnswers: [
+            {
+              userAnswer: 'Cheesecake',
+              dateReaction: 'Uhh'
+            },
+            {
+              userAnswer: 'Apple Pie',
+              dateReaction: "You're the apple of my eye"
+            },
+            {
+              userAnswer: 'Cream Pie',
+              dateReaction: '🙊'
+            }
+          ]
+        }
+      ]
+    },
+  ];
+
+// ACCESS USER ANSWER --> (cardArr[0].conversations[0].userAnswers[0].userAnswer)
 // Current Card
 let currentCardIndex = 0;
 let currentCard = cardArr[0];
@@ -51,13 +136,13 @@ function notLike() {
 
 // Display greeting when being matched
 function messages() {
-    document.querySelector('.messages').innerText = currentCard.greeting;
+    document.querySelector('.messages').innerText = currentCard.conversations[0].dateAnswer;
  }
 
 // MATCH SYSTEM: Open chat window on like button
 function chatWindow() {
     // Opens chatWindow HTML
-    console.log(`You picked card ${currentCardIndex}. The name is ${currentCard.name}. The age is ${currentCard.age}. The bio is: "${currentCard.bio}" and the greeting is: "${currentCard.greeting}"`);
+    console.log(`You picked card ${currentCardIndex}. The name is ${currentCard.name}. The age is ${currentCard.age}. The bio is: "${currentCard.bio}" and the greeting is: "${cardArr[0].conversations[0].dateAnswer}"`);
     // When like is clicked, turn chatwindow display on.
     document.getElementById("chat-window").style.display = "block";
     // When chatwindow is on, turn off matching system
@@ -114,6 +199,15 @@ function answer3() {
     //document.querySelector('.messages')
     //cardArr[currentCardIndex].answers[0])
 }
+// ANSWER MECHANICS
+// Initial Answer after Match
+// Pick between answer 1, 2, or 3
+// Answer 1 triggeres reaction 1
+// Answer 2 t
+// Depending on the reaction answer 2.1, 2.2 or 2.3 will be sent next
+// Pick between anwsers for 2.1, 2.2 or 2.3  
+
+
 
 // Reset button function
 function reset() {
