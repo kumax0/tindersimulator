@@ -73,9 +73,45 @@ function chatWindow() {
 
 }
 // Answer buttons
-function answer() {
+function answer1() {
     // On button click create new answer paragraph into HTML
-    document.querySelector('.messages')
+    // newP = document.querySelector('.messages').createElement('p')
+    // newText1 = document.querySelector('.messages').createTextNode('this is the answer I clicked')
+    // newP.appendChild(newText1)
+    const para = document.createElement("P");
+    para.innerHTML = "This is a paragraph.";
+    document.querySelector(".messages").appendChild(para)
+    console.log("answer1 has been pressed")
+
+    //document.querySelector('.messages')
+    //cardArr[currentCardIndex].answers[0])
+}
+
+function answer2() {
+    // On button click create new answer paragraph into HTML
+    // newP = document.querySelector('.messages').createElement('p')
+    // newText1 = document.querySelector('.messages').createTextNode('this is the answer I clicked')
+    // newP.appendChild(newText1)
+    const para = document.createElement("P");
+    para.innerHTML = "This is a paragraph.";
+    document.querySelector(".messages").appendChild(para)
+    console.log("answer2 has been pressed")
+
+    //document.querySelector('.messages')
+    //cardArr[currentCardIndex].answers[0])
+}
+
+function answer3() {
+    // On button click create new answer paragraph into HTML
+    // newP = document.querySelector('.messages').createElement('p')
+    // newText1 = document.querySelector('.messages').createTextNode('this is the answer I clicked')
+    // newP.appendChild(newText1)
+    const para = document.createElement("div");
+    para.innerHTML = "this is answer 3";
+    document.querySelector(".messages").appendChild(para)
+    console.log("answer3 has been pressed")
+
+    //document.querySelector('.messages')
     //cardArr[currentCardIndex].answers[0])
 }
 
@@ -102,5 +138,11 @@ window.addEventListener('load', () => {
     resetBtn.addEventListener('click', reset);
 
     const answerBtn1 = document.getElementById('answer-1');
-    answerBtn1.addEventListener('click', answer);
+    answerBtn1.addEventListener('click', answer1);
+
+    const answerBtn2 = document.getElementById('answer-2');
+    answerBtn2.addEventListener('click', answer2);
+
+    const answerBtn3 = document.getElementById('answer-3');
+    answerBtn3.addEventListener('click', answer3);
   });
