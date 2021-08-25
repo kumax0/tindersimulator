@@ -3,59 +3,80 @@
 // Customizable dateprofile skeletton
 class Dateprofile {
 
-    constructor(name, age) {
+    constructor(name, age, bio, greeting) {
         this.name = name;
         this.age = age;
+        this.bio = bio;
+        this.greeting = greeting;
     }
 
-    bio() {
-        let bio = "put description here";
-        return bio;
+    getBio() {
+        return this.bio
     }
 
-    greeting() {
-        let greeting = "put greeting here";
-        return greeting;
+    getGreeting() {
+        return this.greeting;
     }
 }
 
 // Date profiles
-const card1 = new Dateprofile('Peter', 23);
-const card2 = new Dateprofile('Alice', 99);
-const card3 = new Dateprofile('Blümchen', 44);
+const card1 = new Dateprofile('Peter', 23, 'bin ein alter Maier', 'Hallo, darf ich dir einen Kuchen kaufen');
+const card2 = new Dateprofile('Alice', 99, 'LF wine and dine', 'Hallöchen mein lieber');
+const card3 = new Dateprofile('Blümchen', 44, 'Ich bin eine Blume', 'Hi, bist du eine Biene?');
 const cardArr = [card1, card2, card3];
+// Current Card
 let currentCardIndex = 0
-//  //Test logs of date profile number 1
-// console.log(card1.bio())
-// console.log(card1.name)
-// console.log(card1.age)
-// date1.bio = 'hi this is my new bio'
-// console.log(card1.bio)
-// console.log(card1.greeting())
+let currentCard = cardArr[0]
+// Display currentCard in HTML
+displayCard()
+function displayCard(currentCardIndex){
+    document.querySelector("body > section.cards > p").innerHTML = `${currentCard.name} ${currentCard.age} <br> Bio: ${currentCard.bio} </br>`
+}
 
 // MATCH SYSTEM: Card swipe mechanics --> iterate through array on notLike button
 function notLike() {
-    // Creater Iterator that increments on button click
-    let currentCard = cardArr[currentCardIndex++]
-    // Console.log(currentCard) --> logs current card    
-    // Display currentCard in HTML object
-    document.querySelector("body > section.cards > p").innerHTML = `${currentCard.name} ${currentCard.age}`
-    // Reset to first card when finishing cycling through the array
-    if (currentCardIndex >= cardArr.length) {
+    // Create Iterator that increments on button click or resets to first index of cardArr
+    if (currentCardIndex === cardArr.length - 1){
         currentCardIndex = 0
+    } else {
+    currentCardIndex++
+    } 
+    console.log(`Current card index is: ${currentCardIndex}`)
+    currentCard = cardArr[currentCardIndex] 
+    // Reset to first card when finishing cycling through the array
+    displayCard()
     }
-}
+//     console.log(currentCardIndex)
+//     return currentCard
    // MATCH SYSTEM: Open chat window on like button
-function like() {
+function chatWindow() {
+    // Opens chatWindow HTML
+    console.log(`You picked card ${currentCardIndex}. The name is ${currentCard.name}. The age is ${currentCard.age}. The bio is: "${currentCard.bio}" and the greeting is: "${currentCard.greeting}"`)
     // When like is clicked, turn chatwindow display on.
     document.getElementById("chat-window").style.display = "block";
-    // when chatwindow is on, turn off matching system
+    // When chatwindow is on, turn off matching system
     document.querySelector("body > section.cards > p").style.display = "none"
+    // When chatWindow is on, turn off like and not like buttons
+    document.querySelector(".btn-like").style.visibility = "hidden"
+    document.querySelector(".btn-not-like").style.visibility = "hidden"
+    // Load chatwindow html elements
+    
+    // Display current cards information in HTML
+    document.querySelector('#chat-window > div > p.name').innerHTML = currentCard.name
+    document.querySelector('#chat-window > div > p.age').innerHTML = currentCard.age
+
+    messages();
+
 }
-// Reset
+
+function messages() {
+    document.querySelector('.messages').innerText = currentCard.greeting
+ }
+// Reset button function
 function reset() {
     location.reload()
 }
+
 
 
 
@@ -68,7 +89,7 @@ window.addEventListener('load', () => {
     notLikeBtn.addEventListener('click', notLike);
 
     const likeBtn = document.getElementById('like');
-    likeBtn.addEventListener('click', like);
+    likeBtn.addEventListener('click', chatWindow);
 
     const resetBtn = document.getElementById('reset');
     resetBtn.addEventListener('click', reset);
