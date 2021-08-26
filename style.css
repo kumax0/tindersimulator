@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    color: rgb(224, 85, 85);
+}
+
+p {
+    display: flex;
+    position: relative;
+    justify-content:flex-start;
+    font-size: 110%;
+    font-weight:500;
+}
+
+hr.rounded {
+    border-top: 8px solid rgb(175, 39, 39);
+    border-radius: 5px;
+  }
+
+img {
+    align-items: center;
+    height: 25%;
+    width: 25%;
+    border-radius: 50%;
+  }
+
+  #answer-1{
+    font-size: 110%;
+    font-weight: 600;  
+    color: red;
+    
+  }

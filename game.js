@@ -33,19 +33,19 @@ let stage;
 const cardArr = [
     { // Profile Information Peter
       name: 'Peter',
-      age: 23,
-      bio: 'bin ein alter Maier',
+      age: 34,
+      bio: 'I like to dine and wine like a manswine',
       // Profile converstions Peter
       conversations: [ // Conversation array filled with objects
         { // Peter Conversation 1
-          dateAnswer: 'This is a greeting meesage 1 from Peter',
+          dateAnswer: `Heyy hows it going with you? You're super cute damnnnnnn`,
           userAnswers: [
             {
-            userAnswer: 'User Answer 1.1 Peter',
-            dateReaction: 'Date Reaction 1.1 Peter'
+            userAnswer: 'Uhm..Hi',
+            dateReaction: 'You know climate change is gonna put us all underwater, so I might as well get you wet now'
             },
             {
-            userAnswer: 'User Answer 1.2 Peter',
+            userAnswer: `User Answer 1.2 Peter`,
             dateReaction: 'Date Reaction 1.2 Peter'
             },
             {
@@ -58,8 +58,8 @@ const cardArr = [
           dateAnswer: 'This is Peter message 2.1',
           userAnswers: [
             {
-            userAnswer: 'User Answer 2.1.1 Peter',
-            dateReaction: 'Date Reaction 2.1.1 Peter'
+            userAnswer: `In that case if it's all the same to you, I'll just skip to inevitable death, thanks`,
+            dateReaction: `Girl I'd break all the chairs in the world, so you'd have to sit on my face `
             },
             {
             userAnswer: 'User Answer 2.1.2 Peter',
@@ -75,12 +75,12 @@ const cardArr = [
               dateAnswer: 'This is Peter message 2.2',
               userAnswers: [
                 {
-                userAnswer: 'User Answer 2.2.1 Peter',
-                dateReaction: 'Date Reaction 2.2.1 Peter'
+                userAnswer: 'Why? is you nose bigger than your dick?',
+                dateReaction: 'Dang girl, you feisty..'
                 },
                 {
-                userAnswer: 'User Answer 2.2.2 Peter',
-                dateReaction: "Date Reaction 2.2.2 Peter"
+                userAnswer: 'I had a dream about you one time',
+                dateReaction: "Tell me about it"
                 },
                 {
                 userAnswer: 'User Answer 2.2.3 Peter',
@@ -92,8 +92,8 @@ const cardArr = [
           dateAnswer: 'This is Peter message 2.3',
           userAnswers: [
             {
-            userAnswer: 'User Answer 2.3.1 Peter',
-            dateReaction: 'Date Reaction 2.3.1 Peter'
+            userAnswer: 'I was at a funeral... Open coffin. Thought it was for my grandma, but you were in there',
+            dateReaction: 'Ok now you are being mean'
             },
             {
             userAnswer: 'User Answer 2.3.2 Peter',
@@ -109,8 +109,8 @@ const cardArr = [
             dateAnswer: 'This is Peter message 3.1',
             userAnswers: [
               {
-              userAnswer: 'User Answer 3.1.1 Peter',
-              dateReaction: 'Date Reaction 3.1.1 Peter'
+              userAnswer: 'I want to paint you green and spank you like a disobedient avocado',
+              dateReaction: `And now you're getting weird. WTF is wrong with you?`
               },
               {
               userAnswer: 'User Answer 3.1.2 Peter',
@@ -126,8 +126,8 @@ const cardArr = [
           dateAnswer: 'This is Peter message 3.2',
           userAnswers: [
             {
-            userAnswer: 'User Answer 3.2.1 Peter',
-            dateReaction: 'Date Reaction 3.2.1 Peter'
+            userAnswer: `You're so self absorbed that you don't even notice how stupid your messages are`,
+            dateReaction: 'I just wanted to be funny you know?'
             },
             {
             userAnswer: 'User Answer 3.2.2 Peter',
@@ -143,12 +143,12 @@ const cardArr = [
         dateAnswer: 'This is Peter message 3.3',
         userAnswers: [
           {
-          userAnswer: 'User Answer 3.3.1 Peter',
-          dateReaction: 'Date Reaction 3.3.1 Peter'
+          userAnswer: 'You just wanted to get in my panties..',
+          dateReaction: 'Well... that too. haha!'
           },
           {
-          userAnswer: 'User Answer 3.3.2 Peter',
-          dateReaction: "Date Reaction 3.3.2 Peter"
+          userAnswer: 'Do you have any allergies?',
+          dateReaction: "Peanuts..why?"
           },
           {
           userAnswer: 'User Answer 3.3.3 Peter',
@@ -160,8 +160,8 @@ const cardArr = [
       dateAnswer: 'This is Peter message 3.4 Peter',
       userAnswers: [
         {
-        userAnswer: 'User Answer 3.4.1 Peter',
-        dateReaction: 'Date Reaction 3.4.1 Peter'
+        userAnswer: `I'll let you in my panties if you eat them off...they will be covered in Peanutbutter tho`,
+        dateReaction: 'Sounds tempting🤔 I die for your p****'
         },
         {
         userAnswer: 'User Answer 3.4.2 Peter',
@@ -177,8 +177,8 @@ const cardArr = [
     dateAnswer: 'This is Peter message 3.5',
     userAnswers: [
       {
-      userAnswer: 'User Answer 3.5.1 Peter',
-      dateReaction: 'Date Reaction 3.5.1 Peter'
+      userAnswer: 'I call that dedication. Okay you get one last chance... Tell me. What did you do on the weekend?',
+      dateReaction: 'Oh that was interesting! I got to watch a squirrel give birth!'
       },
       {
       userAnswer: 'User Answer 3.5.2 Peter',
@@ -194,8 +194,8 @@ const cardArr = [
   dateAnswer: 'This is Peter message 3.6',
   userAnswers: [
     {
-    userAnswer: 'User Answer 3.6.1 Peter',
-    dateReaction: 'Date Reaction 3.6.1 Peter'
+    userAnswer: 'How the heck did that happen? Do you have a pet squirrel?',
+    dateReaction: 'My friend keeps one in a fish tank. We caught another wild one and forced them to have squirrel sex😂😂😂👌👌💯💯'
     },
     {
     userAnswer: 'User Answer 3.6.2 Peter',
@@ -211,8 +211,8 @@ const cardArr = [
   dateAnswer: 'This is Peter message 3.7',
   userAnswers: [
     {
-    userAnswer: 'User Answer 3.7.1 Peter',
-    dateReaction: 'Date Reaction 3.7.1 Peter'
+    userAnswer: 'OMG what the f*** is wrong with you!?',
+    dateReaction: '5 weeks later she pops out 3 slimey little buggers. The smell ...sheeesh'
     },
     {
     userAnswer: 'User Answer 3.7.2 Peter',
@@ -228,8 +228,8 @@ const cardArr = [
   dateAnswer: 'This is Peter message 3.8',
   userAnswers: [
     {
-    userAnswer: 'User Answer 3.8.1 Peter',
-    dateReaction: 'Date Reaction 3.8.1 Peter'
+    userAnswer: `You're disgusting.. I am going to block you now.. Bye`,
+    dateReaction: `too bad.. it doesn't get any better than this on tinder`
     },
     {
     userAnswer: 'User Answer 3.8.2 Peter',
@@ -245,8 +245,8 @@ const cardArr = [
   dateAnswer: 'This is Peter message 3.9',
   userAnswers: [
     {
-    userAnswer: 'User Answer 3.9.1 Peter',
-    dateReaction: 'Date Reaction 3.9.1 Peter'
+    userAnswer: `User Answer 3.9.1`,
+    dateReaction: 'Date Reaction 3.9.1'
     },
     {
     userAnswer: 'User Answer 3.9.2 Peter',
@@ -261,7 +261,7 @@ const cardArr = [
     // Profile Information Alice
     { name: 'Alice',
       age: 44,
-      bio: 'I want to wine and dine like a swine',
+      bio: 'This does not look like wonderland',
       conversations: [{ // Alice Conversation 1
         dateAnswer: 'This is a greeting meesage 1 from Alice',
         userAnswers: [
@@ -539,6 +539,7 @@ function messages() { // Gets called in chatWindow function (when pressed 'like'
 
 // MATCH SYSTEM: Open chat window on like button
 function chatWindowDisplay() { // called when pressed like
+    alert("YOU GOT A MATCH")
     // Opens chatWindow HTML
     console.log(`You picked card ${currentCardIndex}. The name is ${currentCard.name}. The age is ${currentCard.age}. The bio is: "${currentCard.bio}" and the greeting is: "${cardArr[0].conversations[0].dateAnswer}"`);
     // When like is clicked, turn chatwindow display on.
