@@ -514,7 +514,7 @@ function notLike() {
 // Messages function for reactive messages
 function messages() { // Gets called in chatWindow function (when pressed 'like')
     // Fill first greeting message into HTML, when matched
-    document.querySelector('.messages').innerText = currentCard.conversations[0].dateAnswer;
+    // PUT INITIAL MESSAGE IN TO HEADER CLASS document.querySelector('.messages').innerText += currentCard.conversations[0].dateAnswer;
     // Set answer buttons innerText to answers of stage 0
    // if (stage === 0) {
       document.querySelector('#answer-1').innerText = currentCard.conversations[stage].userAnswers[0].userAnswer
@@ -579,7 +579,7 @@ function chatWindowDisplay() { // called when pressed like
 // Answer buttons
 function answer1(event) {
     // PICKED ANSWER
-
+    console.log(document.querySelector('.messages'))
     // PickedAnswer is same as button text content
     pickedAnswer = event.currentTarget.innerText
    // let pickedAnswerToShow = event.currentTarget.innerText
