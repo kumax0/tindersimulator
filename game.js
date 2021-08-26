@@ -1,6 +1,7 @@
 // GAME FUNCTIONALITY
-
-// Customizable dateprofile skeletton
+/*
+LEGACY DATEPROFILE CLASSES AND VARIABLES
+Customizable dateprofile skeletton
 class Dateprofile {
 
     constructor(name, age, bio, greeting, answers, reactions) {
@@ -20,12 +21,15 @@ class Dateprofile {
         return this.greeting;
     }
 }
-
-// Date profiles
-let stage;
+Date profiles
 const card1 = new Dateprofile('Peter', 23, 'bin ein alter Maier', 'Hallo, darf ich dir einen Kuchen kaufen', [`Peter answer 1`, `Peter answer 2`], [`Peter reaction 1`, `Peter reaction 2`]);
 const card2 = new Dateprofile('Alice', 99, 'LF wine and dine', 'Hallöchen mein lieber', [`Alice answer 1`,`Alice answer 2`], [`Alice reaction 1`, `Alice reaction 2`]);
 const card3 = new Dateprofile('Blümchen', 44, 'Ich bin eine Blume', 'Hi, bist du eine Biene?', [`Blümchen answer 1`,`Blümchen answer 2`], [`Blümchen reaction 1`, `Blümchen reaction 2`]);
+LEGACY CONTENT ENDS
+*/
+// GLOBAL VARIABLES
+// Stage && DateProfiles
+let stage;
 const cardArr = [
     { // Profile Information Peter
       name: 'Peter',
@@ -482,11 +486,12 @@ userAnswers: [
   ], 
   }
 ]
-
-// ACCESS USER ANSWER --> (cardArr[0].conversations[0].userAnswers[0].userAnswer)
+// GLOBAL VARIABLES
 // Current Card
 let currentCardIndex = 0;
 let currentCard = cardArr[0];
+// Picked Answer
+let pickedAnswer = "";
 // Display currentCard function --> display current Card in matching window
 displayCard()
 function displayCard(){
@@ -496,34 +501,44 @@ function displayCard(){
 // MATCH SYSTEM: Card swipe mechanics --> iterate through array on notLike button
 function notLike() {
     // Create Iterator that increments on button click or resets to first index of cardArr
-    if (currentCardIndex === cardArr.length - 1){
+    if (currentCardIndex === cardArr.length - 1) {
         currentCardIndex = 0;
     } else {
     currentCardIndex++;
     } 
     console.log(`Current card index is: ${currentCardIndex}`);
     currentCard = cardArr[currentCardIndex] ;
-    // Reset to first card when finishing cycling through the array
     displayCard();
     }
 
-// Display greeting when being matched
-function messages() {
+// Messages function for reactive messages
+function messages() { // Gets called in chatWindow function (when pressed 'like')
+    // Fill first greeting message into HTML, when matched
     document.querySelector('.messages').innerText = currentCard.conversations[0].dateAnswer;
-    // Set innertext of answer button 1  currentCard.conversations[0].userAnswers0
-    // Set innertext of answer button 2 currentCard.conversations[0].userAnswers0
-    // Set innertext of answer button 3 currentCard.conversations[0].userAnswers0
-    /*
-    buttonId.innerText = conversations[0].unserAnswers1[0]
-    buttonId.innerText = conversations[0].unserAnswers1[1]
-    buttonId.innerText = conversations[0].unserAnswers1[2]*/
-    // give the buttons class and get all those buttons into an array
-// buttons.forEach( (button, i) => button.innerText = conversations[0].unserAnswers1[i] )
+    // Set answer buttons innerText to answers of stage 0
+   // if (stage === 0) {
+      document.querySelector('#answer-1').innerText = currentCard.conversations[stage].userAnswers[0].userAnswer
+      document.querySelector('#answer-2').innerText = currentCard.conversations[stage].userAnswers[1].userAnswer
+      document.querySelector('#answer-3').innerText = currentCard.conversations[stage].userAnswers[2].userAnswer
+   // }
+    // Set variable matchedReaction to reaction when certain answer is picked
+    let matchedReaction = currentCard.conversations[stage].userAnswers.find(function (element) {
+      return element.userAnswer === pickedAnswer}).dateReaction
+    // Increment stage
+    stage++
+    console.log(stage)
 
- }
+    document.querySelector('#answer-1').innerText = currentCard.conversations[stage].userAnswers[0].userAnswer
+    document.querySelector('#answer-2').innerText = currentCard.conversations[stage].userAnswers[1].userAnswer
+    document.querySelector('#answer-3').innerText = currentCard.conversations[stage].userAnswers[2].userAnswer
+    // return matchedReaction to be called in answer
+    return matchedReaction
+    // give the buttons class and get all those buttons into an array
+    // buttons.forEach( (button, i) => button.innerText = conversations[0].unserAnswers1[i] )
+}
 
 // MATCH SYSTEM: Open chat window on like button
-function chatWindow() {
+function chatWindowDisplay() { // called when pressed like
     // Opens chatWindow HTML
     console.log(`You picked card ${currentCardIndex}. The name is ${currentCard.name}. The age is ${currentCard.age}. The bio is: "${currentCard.bio}" and the greeting is: "${cardArr[0].conversations[0].dateAnswer}"`);
     // When like is clicked, turn chatwindow display on.
@@ -533,14 +548,17 @@ function chatWindow() {
     // When chatWindow is on, turn off like and not like buttons
     document.querySelector(".btn-like").style.visibility = "hidden";
     document.querySelector(".btn-not-like").style.visibility = "hidden";
-    // Display current cards information in HTML
+    // Display current cards information in chatWindow
     document.querySelector('#chat-window > div > p.name').innerHTML = currentCard.name;
     document.querySelector('#chat-window > div > p.age').innerHTML = currentCard.age;
     document.querySelector('#chat-window > div > p.bio').innerHTML = `Bio: ${currentCard.bio}`;
-    messages();
-    // Update stage tracker to stage 0
+    // sets stage to 0
     stage = 0;
-   // if stage is 0, display answer 1.1, 1.2, 1.3 in HTML
+    // calls messages function which also increments the stage counter
+    messages();
+  
+    
+
     
 }
 
@@ -557,55 +575,39 @@ function chatWindow() {
 // Buttons now will have new content based on answering options for Conversation 3.1 - 3.9
 // Pick answer for Conversation 3.x --> Every conversation from 3.1 - 3.9 has their own 3 answers and paired reactions
 // Pick answer --> show paired reaction --> (WIN OR LOSE)
-// ----
-// 
-
 
 // Answer buttons
-function answer1() {
-    // On button click create new answer paragraph into HTML
-    // newP = document.querySelector('.messages').createElement('p')
-    // newText1 = document.querySelector('.messages').createTextNode('this is the answer I clicked')
-    // newP.appendChild(newText1)
-    const para = document.createElement("P");
-    para.innerHTML = "This is a paragraph.";
-    document.querySelector(".messages").appendChild(para)
-    console.log("answer1 has been pressed")
+function answer1(event) {
+    // PICKED ANSWER
 
-    //document.querySelector('.messages')
-    //cardArr[currentCardIndex].answers[0])
+    // PickedAnswer is same as button text content
+    pickedAnswer = event.currentTarget.innerText
+   // let pickedAnswerToShow = event.currentTarget.innerText
 
-    // On click of button, check stage 
-    // Retrieve innerText of button
-    // Map over userAnswers array 
+    let dateReaction = messages()
+    console.log(dateReaction)
+
+    // Create new P Element containing picked UserAnswer
+    const paraAnswer = document.createElement("P");
+    paraAnswer.innerText = pickedAnswer;
+    // Fill HTML with new P Element containing the picked Answer
+    document.querySelector(".messages").appendChild(paraAnswer)
+ 
+   
+  // REACTION 
+  // Fill HTML with new P Element containing the reaction to the pickedAnswer
+    
+    const paraReaction = document.createElement("P");
+    paraReaction.innerText = dateReaction
+    document.querySelector(".messages").appendChild(paraReaction)
 }
 
 // function answer2() {
-//     // On button click create new answer paragraph into HTML
-//     // newP = document.querySelector('.messages').createElement('p')
-//     // newText1 = document.querySelector('.messages').createTextNode('this is the answer I clicked')
-//     // newP.appendChild(newText1)
-//     const para = document.createElement("P");
-//     para.innerHTML = "This is a paragraph.";
-//     document.querySelector(".messages").appendChild(para)
-//     console.log("answer2 has been pressed")
-
-//     //document.querySelector('.messages')
-//     //cardArr[currentCardIndex].answers[0])
+//   
 // }
 
 // function answer3() {
-//     // On button click create new answer paragraph into HTML
-//     // newP = document.querySelector('.messages').createElement('p')
-//     // newText1 = document.querySelector('.messages').createTextNode('this is the answer I clicked')
-//     // newP.appendChild(newText1)
-//     const para = document.createElement("div");
-//     para.innerHTML = "this is answer 3";
-//     document.querySelector(".messages").appendChild(para)
-//     console.log("answer3 has been pressed")
-
-//     //document.querySelector('.messages')
-//     //cardArr[currentCardIndex].answers[0])
+//    
 // }
 
 
@@ -615,19 +617,13 @@ function reset() {
     location.reload()
 }
 
-
-
-
-// // Not like button
-
 // Eventlistener Buttons 
-// Not Like button
 window.addEventListener('load', () => {
     const notLikeBtn = document.getElementById('not-like');
     notLikeBtn.addEventListener('click', notLike);
 
     const likeBtn = document.getElementById('like');
-    likeBtn.addEventListener('click', chatWindow);
+    likeBtn.addEventListener('click', chatWindowDisplay);
 
     const resetBtn = document.getElementById('reset');
     resetBtn.addEventListener('click', reset);
