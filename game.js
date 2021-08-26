@@ -31,84 +31,456 @@ const cardArr = [
       age: 23,
       bio: 'bin ein alter Maier',
       // Profile converstions Peter
-      conversations: [
+      conversations: [ // Conversation array filled with objects
         { // Peter Conversation 1
-          dateAnswer: 'Guten Tag, darf ich dir einen Kuchen kaufen?',
+          dateAnswer: 'This is a greeting meesage 1 from Peter',
           userAnswers: [
             {
-            userAnswer: 'Ja',
-            dateReaction: 'Das freut mich!'
+            userAnswer: 'User Answer 1.1 Peter',
+            dateReaction: 'Date Reaction 1.1 Peter'
             },
             {
-            userAnswer: 'Nein',
-            dateReaction: 'Wieso? Bist du ein Arschloch?'
+            userAnswer: 'User Answer 1.2 Peter',
+            dateReaction: 'Date Reaction 1.2 Peter'
             },
             {
-            userAnswer: 'Ich backe ihn lieber selbst',
-            dateReaction: 'Du kannst mich gerne mal backen'
+            userAnswer: 'User Answer 1.3 Peter',
+            dateReaction: 'Date Reaction 1.3 Peter'
             }
-          ]
+          ] // End of userAnswers 1
         },
         { // Peter Conversation 2.1
-          dateAnswer: 'Was ist dein Lieblingskuchen?',
+          dateAnswer: 'This is Peter message 2.1',
           userAnswers: [
             {
-            userAnswer: 'Cheesecake',
-            dateReaction: 'Uhh'
+            userAnswer: 'User Answer 2.1.1 Peter',
+            dateReaction: 'Date Reaction 2.1.1 Peter'
             },
             {
-            userAnswer: 'Apple Pie',
-            dateReaction: "You're the apple of my eye"
+            userAnswer: 'User Answer 2.1.2 Peter',
+            dateReaction: "Date Reaction 2.1.2 Peter"
             },
             {
-            userAnswer: 'Cream Pie',
-            dateReaction: '🙊'
+            userAnswer: 'User Answer 2.1.3 Peter',
+            dateReaction: 'Date Reaction 2.1.3 Peter'
             }
-          ]
+          ] // End of userAnswers 2.1
+        },
+         { // Peter Conversation 2.2
+              dateAnswer: 'This is Peter message 2.2',
+              userAnswers: [
+                {
+                userAnswer: 'User Answer 2.2.1 Peter',
+                dateReaction: 'Date Reaction 2.2.1 Peter'
+                },
+                {
+                userAnswer: 'User Answer 2.2.2 Peter',
+                dateReaction: "Date Reaction 2.2.2 Peter"
+                },
+                {
+                userAnswer: 'User Answer 2.2.3 Peter',
+                dateReaction: 'Date Reaction 2.2.3'
+                }
+          ] // End of userAnswers 2.2
+        },
+        { // Peter Conversation 2.3
+          dateAnswer: 'This is Peter message 2.3',
+          userAnswers: [
+            {
+            userAnswer: 'User Answer 2.3.1 Peter',
+            dateReaction: 'Date Reaction 2.3.1 Peter'
+            },
+            {
+            userAnswer: 'User Answer 2.3.2 Peter',
+            dateReaction: "Date Reaction 2.3.2 Peter"
+            },
+            {
+            userAnswer: 'User Answer 2.3.3 Peter',
+            dateReaction: 'Date Reaction 2.3.3'
+            }
+      ] // End of userAnswers 2.3
+    },
+          { // Peter Conversation 3.1
+            dateAnswer: 'This is Peter message 3.1',
+            userAnswers: [
+              {
+              userAnswer: 'User Answer 3.1.1 Peter',
+              dateReaction: 'Date Reaction 3.1.1 Peter'
+              },
+              {
+              userAnswer: 'User Answer 3.1.2 Peter',
+              dateReaction: "Date Reaction 3.1.2 Peter"
+              },
+              {
+              userAnswer: 'User Answer 3.1.3 Peter',
+              dateReaction: 'Date Reaction 3.1.3 Peter'
+              }
+        ] // End of userAnswers 3.1
+        },
+        { // Peter Conversation 3.2
+          dateAnswer: 'This is Peter message 3.2',
+          userAnswers: [
+            {
+            userAnswer: 'User Answer 3.2.1 Peter',
+            dateReaction: 'Date Reaction 3.2.1 Peter'
+            },
+            {
+            userAnswer: 'User Answer 3.2.2 Peter',
+            dateReaction: "Date Reaction 3.2.2 Peter"
+            },
+            {
+            userAnswer: 'User Answer 3.2.3 Peter',
+            dateReaction: 'Date Reaction 3.2.3 Peter'
+            }
+      ] // End of userAnswers 3.2
+      },
+      { // Peter Conversation 3.3
+        dateAnswer: 'This is Peter message 3.3',
+        userAnswers: [
+          {
+          userAnswer: 'User Answer 3.3.1 Peter',
+          dateReaction: 'Date Reaction 3.3.1 Peter'
+          },
+          {
+          userAnswer: 'User Answer 3.3.2 Peter',
+          dateReaction: "Date Reaction 3.3.2 Peter"
+          },
+          {
+          userAnswer: 'User Answer 3.3.3 Peter',
+          dateReaction: 'Date Reaction 3.3.3 Peter'
+          }
+    ] // End of userAnswers 3.3
+    },
+    { // Peter Conversation 3.4
+      dateAnswer: 'This is Peter message 3.4 Peter',
+      userAnswers: [
+        {
+        userAnswer: 'User Answer 3.4.1 Peter',
+        dateReaction: 'Date Reaction 3.4.1 Peter'
+        },
+        {
+        userAnswer: 'User Answer 3.4.2 Peter',
+        dateReaction: "Date Reaction 3.4.2 Peter"
+        },
+        {
+        userAnswer: 'User Answer 3.4.3 Peter',
+        dateReaction: 'Date Reaction 3.3.3 Peter'
         }
-      ]
-    }, // Profile Information Alice
+  ] // End of userAnswers 3.4
+  },
+  { // Peter Conversation 3.5
+    dateAnswer: 'This is Peter message 3.5',
+    userAnswers: [
+      {
+      userAnswer: 'User Answer 3.5.1 Peter',
+      dateReaction: 'Date Reaction 3.5.1 Peter'
+      },
+      {
+      userAnswer: 'User Answer 3.5.2 Peter',
+      dateReaction: "Date Reaction 3.5.2 Peter"
+      },
+      {
+      userAnswer: 'User Answer 3.5.3 Peter',
+      dateReaction: 'Date Reaction 3.5.3 Peter'
+      }
+] // End of userAnswers 3.5
+},
+{ // Peter Conversation 3.6
+  dateAnswer: 'This is Peter message 3.6',
+  userAnswers: [
+    {
+    userAnswer: 'User Answer 3.6.1 Peter',
+    dateReaction: 'Date Reaction 3.6.1 Peter'
+    },
+    {
+    userAnswer: 'User Answer 3.6.2 Peter',
+    dateReaction: "Date Reaction 3.6.2 Peter"
+    },
+    {
+    userAnswer: 'User Answer 3.6.3 Peter',
+    dateReaction: 'Date Reaction 3.6.3 Peter'
+    }
+] // End of userAnswers 3.6
+},
+{ // Peter Conversation 3.7
+  dateAnswer: 'This is Peter message 3.7',
+  userAnswers: [
+    {
+    userAnswer: 'User Answer 3.7.1 Peter',
+    dateReaction: 'Date Reaction 3.7.1 Peter'
+    },
+    {
+    userAnswer: 'User Answer 3.7.2 Peter',
+    dateReaction: "Date Reaction 3.7.2 Peter"
+    },
+    {
+    userAnswer: 'User Answer 3.7.3 Peter',
+    dateReaction: 'Date Reaction 3.7.3 Peter'
+    }
+] // End of userAnswers 3.7
+},
+{ // Peter Conversation 3.8
+  dateAnswer: 'This is Peter message 3.8',
+  userAnswers: [
+    {
+    userAnswer: 'User Answer 3.8.1 Peter',
+    dateReaction: 'Date Reaction 3.8.1 Peter'
+    },
+    {
+    userAnswer: 'User Answer 3.8.2 Peter',
+    dateReaction: "Date Reaction 3.7.2 Peter"
+    },
+    {
+    userAnswer: 'User Answer 3.8.3 Peter',
+    dateReaction: 'Date Reaction 3.8.3 Peter'
+    }
+] // End of userAnswers 3.8
+},
+{ // Peter Conversation 3.9
+  dateAnswer: 'This is Peter message 3.9',
+  userAnswers: [
+    {
+    userAnswer: 'User Answer 3.9.1 Peter',
+    dateReaction: 'Date Reaction 3.9.1 Peter'
+    },
+    {
+    userAnswer: 'User Answer 3.9.2 Peter',
+    dateReaction: "Date Reaction 3.9.2 Peter"
+    },
+    {
+    userAnswer: 'User Answer 3.9.3 Peter',
+    dateReaction: 'Date Reaction 3.9.3 Peter'
+    }
+      ] // End of userAnswers 3.9
+    }]}, // End of Profile Peter
+    // Profile Information Alice
     { name: 'Alice',
       age: 44,
       bio: 'I want to wine and dine like a swine',
-      conversations: [
-        { // Alice Conversation 1
-          dateAnswer: 'Hello dear, you look tasty',
+      conversations: [{ // Alice Conversation 1
+        dateAnswer: 'This is a greeting meesage 1 from Alice',
+        userAnswers: [
+          {
+          userAnswer: 'User Answer 1.1 Alice',
+          dateReaction: 'Date Reaction 1.1 Alice'
+          },
+          {
+          userAnswer: 'User Answer 1.2 Alice',
+          dateReaction: 'Date Reaction 1.2 Alice'
+          },
+          {
+          userAnswer: 'User Answer 1.3 Alice',
+          dateReaction: 'Date Reaction 1.3 Alice'
+          }
+        ] // End of userAnswers 1
+      },
+      { // Alice Conversation 2.1
+        dateAnswer: 'This is Alice message 2.1',
+        userAnswers: [
+          {
+          userAnswer: 'User Answer 2.1.1 Alice',
+          dateReaction: 'Date Reaction 2.1.1 Alice'
+          },
+          {
+          userAnswer: 'User Answer 2.1.2 Alice',
+          dateReaction: "Date Reaction 2.1.2 Alice"
+          },
+          {
+          userAnswer: 'User Answer 2.1.3 Alice',
+          dateReaction: 'Date Reaction 2.1.3 Alice'
+          }
+        ] // End of userAnswers 2.1
+      },
+       { // Alice Conversation 2.2
+            dateAnswer: 'This is Alice message 2.2',
+            userAnswers: [
+              {
+              userAnswer: 'User Answer 2.2.1 Alice',
+              dateReaction: 'Date Reaction 2.2.1 Alice'
+              },
+              {
+              userAnswer: 'User Answer 2.2.2 Alice',
+              dateReaction: "Date Reaction 2.2.2 Alice"
+              },
+              {
+              userAnswer: 'User Answer 2.2.3 Alice',
+              dateReaction: 'Date Reaction 2.2.3'
+              }
+        ] // End of userAnswers 2.2
+      },
+      { // Alice Conversation 2.3
+        dateAnswer: 'This is Alice message 2.3',
+        userAnswers: [
+          {
+          userAnswer: 'User Answer 2.3.1 Alice',
+          dateReaction: 'Date Reaction 2.3.1 Alice'
+          },
+          {
+          userAnswer: 'User Answer 2.3.2 Alice',
+          dateReaction: "Date Reaction 2.3.2 Alice"
+          },
+          {
+          userAnswer: 'User Answer 2.3.3 Alice',
+          dateReaction: 'Date Reaction 2.3.3'
+          }
+    ] // End of userAnswers 2.3
+  },
+        { // Alice Conversation 3.1
+          dateAnswer: 'This is Alice message 3.1',
           userAnswers: [
             {
-            userAnswer: 'You look like shit',
-            dateReaction: "Uhhmm.. that turns me on, shit"
+            userAnswer: 'User Answer 3.1.1 Alice',
+            dateReaction: 'Date Reaction 3.1.1 Alice'
             },
             {
-            userAnswer: 'Hi, nice to meet you Alice!',
-            dateReaction: 'So.. what do you do on weekends like these?'
+            userAnswer: 'User Answer 3.1.2 Alice',
+            dateReaction: "Date Reaction 3.1.2 Alice"
             },
             {
-            userAnswer: 'Want to have a bite ;)?',
-            dateReaction: 'Ew no, I was talking about the bacon in the background of your picture'
+            userAnswer: 'User Answer 3.1.3 Alice',
+            dateReaction: 'Date Reaction 3.1.3 Alice'
             }
-          ]
-        },
-        { // Alice Converstaion 2
-          dateAnswer: 'Was ist dein Lieblingskuchen?',
-          userAnswers: [
-            {
-              userAnswer: 'Cheesecake',
-              dateReaction: 'Uhh'
-            },
-            {
-              userAnswer: 'Apple Pie',
-              dateReaction: "You're the apple of my eye"
-            },
-            {
-              userAnswer: 'Cream Pie',
-              dateReaction: '🙊'
-            }
-          ]
-        }
-      ]
+      ] // End of userAnswers 3.1
+      },
+      { // Alice Conversation 3.2
+        dateAnswer: 'This is Alice message 3.2',
+        userAnswers: [
+          {
+          userAnswer: 'User Answer 3.2.1 Alice',
+          dateReaction: 'Date Reaction 3.2.1 Alice'
+          },
+          {
+          userAnswer: 'User Answer 3.2.2 Alice',
+          dateReaction: "Date Reaction 3.2.2 Alice"
+          },
+          {
+          userAnswer: 'User Answer 3.2.3 Alice',
+          dateReaction: 'Date Reaction 3.2.3 Alice'
+          }
+    ] // End of userAnswers 3.2
     },
-  ];
+    { // Alice Conversation 3.3
+      dateAnswer: 'This is Alice message 3.3',
+      userAnswers: [
+        {
+        userAnswer: 'User Answer 3.3.1 Alice',
+        dateReaction: 'Date Reaction 3.3.1 Alice'
+        },
+        {
+        userAnswer: 'User Answer 3.3.2 Alice',
+        dateReaction: "Date Reaction 3.3.2 Alice"
+        },
+        {
+        userAnswer: 'User Answer 3.3.3 Alice',
+        dateReaction: 'Date Reaction 3.3.3 Alice'
+        }
+  ] // End of userAnswers 3.3
+  },
+  { // Alice Conversation 3.4
+    dateAnswer: 'This is Alice message 3.4 Alice',
+    userAnswers: [
+      {
+      userAnswer: 'User Answer 3.4.1 Alice',
+      dateReaction: 'Date Reaction 3.4.1 Alice'
+      },
+      {
+      userAnswer: 'User Answer 3.4.2 Alice',
+      dateReaction: "Date Reaction 3.4.2 Alice"
+      },
+      {
+      userAnswer: 'User Answer 3.4.3 Alice',
+      dateReaction: 'Date Reaction 3.3.3 Alice'
+      }
+] // End of userAnswers 3.4
+},
+{ // Alice Conversation 3.5
+  dateAnswer: 'This is Alice message 3.5',
+  userAnswers: [
+    {
+    userAnswer: 'User Answer 3.5.1 Alice',
+    dateReaction: 'Date Reaction 3.5.1 Alice'
+    },
+    {
+    userAnswer: 'User Answer 3.5.2 Alice',
+    dateReaction: "Date Reaction 3.5.2 Alice"
+    },
+    {
+    userAnswer: 'User Answer 3.5.3 Alice',
+    dateReaction: 'Date Reaction 3.5.3 Alice'
+    }
+] // End of userAnswers 3.5
+},
+{ // Alice Conversation 3.6
+dateAnswer: 'This is Alice message 3.6',
+userAnswers: [
+  {
+  userAnswer: 'User Answer 3.6.1 Alice',
+  dateReaction: 'Date Reaction 3.6.1 Alice'
+  },
+  {
+  userAnswer: 'User Answer 3.6.2 Alice',
+  dateReaction: "Date Reaction 3.6.2 Alice"
+  },
+  {
+  userAnswer: 'User Answer 3.6.3 Alice',
+  dateReaction: 'Date Reaction 3.6.3 Alice'
+  }
+] // End of userAnswers 3.6
+},
+{ // Alice Conversation 3.7
+dateAnswer: 'This is Alice message 3.7',
+userAnswers: [
+  {
+  userAnswer: 'User Answer 3.7.1 Alice',
+  dateReaction: 'Date Reaction 3.7.1 Alice'
+  },
+  {
+  userAnswer: 'User Answer 3.7.2 Alice',
+  dateReaction: "Date Reaction 3.7.2 Alice"
+  },
+  {
+  userAnswer: 'User Answer 3.7.3 Alice',
+  dateReaction: 'Date Reaction 3.7.3 Alice'
+  }
+] // End of userAnswers 3.7
+},
+{ // Alice Conversation 3.8
+dateAnswer: 'This is Alice message 3.8',
+userAnswers: [
+  {
+  userAnswer: 'User Answer 3.8.1 Alice',
+  dateReaction: 'Date Reaction 3.8.1 Alice'
+  },
+  {
+  userAnswer: 'User Answer 3.8.2 Alice',
+  dateReaction: "Date Reaction 3.7.2 Alice"
+  },
+  {
+  userAnswer: 'User Answer 3.8.3 Alice',
+  dateReaction: 'Date Reaction 3.8.3 Alice'
+  }
+] // End of userAnswers 3.8
+},
+{ // Alice Conversation 3.9
+dateAnswer: 'This is Alice message 3.9',
+userAnswers: [
+  {
+  userAnswer: 'User Answer 3.9.1 Alice',
+  dateReaction: 'Date Reaction 3.9.1 Alice'
+  },
+  {
+  userAnswer: 'User Answer 3.9.2 Alice',
+  dateReaction: "Date Reaction 3.9.2 Alice"
+  },
+  {
+  userAnswer: 'User Answer 3.9.3 Alice',
+  dateReaction: 'Date Reaction 3.9.3 Alice'
+  }
+    ] // End of userAnswers 3.9
+    }
+  ], 
+  }
+]
 
 // ACCESS USER ANSWER --> (cardArr[0].conversations[0].userAnswers[0].userAnswer)
 // Current Card
@@ -159,7 +531,7 @@ function chatWindow() {
 }
 
 // ANSWER MECHANICS
-// Initial Stage gets triggered
+// Initial Stage gets triggered -- 
 // Pick answer --> show paired reaction
 // Based on reaction stage 2.1, 2.2 or 2.3 gets displayed --> answer button change at this stage
 // Button function checks what stage it is at and changes input
@@ -239,9 +611,9 @@ window.addEventListener('load', () => {
     const answerBtn1 = document.getElementById('answer-1');
     answerBtn1.addEventListener('click', answer1);
 
-    const answerBtn2 = document.getElementById('answer-2');
-    answerBtn2.addEventListener('click', answer2);
+    // const answerBtn2 = document.getElementById('answer-2');
+    // answerBtn2.addEventListener('click', answer2);
 
-    const answerBtn3 = document.getElementById('answer-3');
-    answerBtn3.addEventListener('click', answer3);
+    // const answerBtn3 = document.getElementById('answer-3');
+    // answerBtn3.addEventListener('click', answer3);
   });
