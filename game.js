@@ -49,7 +49,7 @@ const cardArr = [
             }
           ]
         },
-        { // Peter Conversation 2
+        { // Peter Conversation 2.1
           dateAnswer: 'Was ist dein Lieblingskuchen?',
           userAnswers: [
             {
@@ -157,6 +157,18 @@ function chatWindow() {
     messages();
 
 }
+
+// ANSWER MECHANICS
+// Initial Stage gets triggered
+// Pick answer --> show paired reaction
+// Based on reaction stage 2.1, 2.2 or 2.3 gets displayed --> answer button change at this stage
+// Button function checks what stage it is at and changes input
+// Pick answer in stage 2.1, 2.2 or 2.3 
+// Pick answer --> show paired reaction
+// Based on reaction stage 3.1 - 3.9 gets displayed --> answer button changes at this stage
+// Pick answer --> show paired reaction (WIN or LOSE)
+
+
 // Answer buttons
 function answer1() {
     // On button click create new answer paragraph into HTML
@@ -172,40 +184,33 @@ function answer1() {
     //cardArr[currentCardIndex].answers[0])
 }
 
-function answer2() {
-    // On button click create new answer paragraph into HTML
-    // newP = document.querySelector('.messages').createElement('p')
-    // newText1 = document.querySelector('.messages').createTextNode('this is the answer I clicked')
-    // newP.appendChild(newText1)
-    const para = document.createElement("P");
-    para.innerHTML = "This is a paragraph.";
-    document.querySelector(".messages").appendChild(para)
-    console.log("answer2 has been pressed")
+// function answer2() {
+//     // On button click create new answer paragraph into HTML
+//     // newP = document.querySelector('.messages').createElement('p')
+//     // newText1 = document.querySelector('.messages').createTextNode('this is the answer I clicked')
+//     // newP.appendChild(newText1)
+//     const para = document.createElement("P");
+//     para.innerHTML = "This is a paragraph.";
+//     document.querySelector(".messages").appendChild(para)
+//     console.log("answer2 has been pressed")
 
-    //document.querySelector('.messages')
-    //cardArr[currentCardIndex].answers[0])
-}
+//     //document.querySelector('.messages')
+//     //cardArr[currentCardIndex].answers[0])
+// }
 
-function answer3() {
-    // On button click create new answer paragraph into HTML
-    // newP = document.querySelector('.messages').createElement('p')
-    // newText1 = document.querySelector('.messages').createTextNode('this is the answer I clicked')
-    // newP.appendChild(newText1)
-    const para = document.createElement("div");
-    para.innerHTML = "this is answer 3";
-    document.querySelector(".messages").appendChild(para)
-    console.log("answer3 has been pressed")
+// function answer3() {
+//     // On button click create new answer paragraph into HTML
+//     // newP = document.querySelector('.messages').createElement('p')
+//     // newText1 = document.querySelector('.messages').createTextNode('this is the answer I clicked')
+//     // newP.appendChild(newText1)
+//     const para = document.createElement("div");
+//     para.innerHTML = "this is answer 3";
+//     document.querySelector(".messages").appendChild(para)
+//     console.log("answer3 has been pressed")
 
-    //document.querySelector('.messages')
-    //cardArr[currentCardIndex].answers[0])
-}
-// ANSWER MECHANICS
-// Initial Answer after Match
-// Pick between answer 1, 2, or 3
-// Answer 1 triggeres reaction 1
-// Answer 2 t
-// Depending on the reaction answer 2.1, 2.2 or 2.3 will be sent next
-// Pick between anwsers for 2.1, 2.2 or 2.3  
+//     //document.querySelector('.messages')
+//     //cardArr[currentCardIndex].answers[0])
+// }
 
 
 
