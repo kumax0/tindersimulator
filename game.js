@@ -22,6 +22,7 @@ class Dateprofile {
 }
 
 // Date profiles
+let stage;
 const card1 = new Dateprofile('Peter', 23, 'bin ein alter Maier', 'Hallo, darf ich dir einen Kuchen kaufen', [`Peter answer 1`, `Peter answer 2`], [`Peter reaction 1`, `Peter reaction 2`]);
 const card2 = new Dateprofile('Alice', 99, 'LF wine and dine', 'Hallöchen mein lieber', [`Alice answer 1`,`Alice answer 2`], [`Alice reaction 1`, `Alice reaction 2`]);
 const card3 = new Dateprofile('Blümchen', 44, 'Ich bin eine Blume', 'Hi, bist du eine Biene?', [`Blümchen answer 1`,`Blümchen answer 2`], [`Blümchen reaction 1`, `Blümchen reaction 2`]);
@@ -47,7 +48,7 @@ const cardArr = [
             userAnswer: 'User Answer 1.3 Peter',
             dateReaction: 'Date Reaction 1.3 Peter'
             }
-          ] // End of userAnswers 1
+          ] // End of userAnswers 0
         },
         { // Peter Conversation 2.1
           dateAnswer: 'This is Peter message 2.1',
@@ -509,6 +510,16 @@ function notLike() {
 // Display greeting when being matched
 function messages() {
     document.querySelector('.messages').innerText = currentCard.conversations[0].dateAnswer;
+    // Set innertext of answer button 1  currentCard.conversations[0].userAnswers0
+    // Set innertext of answer button 2 currentCard.conversations[0].userAnswers0
+    // Set innertext of answer button 3 currentCard.conversations[0].userAnswers0
+    /*
+    buttonId.innerText = conversations[0].unserAnswers1[0]
+    buttonId.innerText = conversations[0].unserAnswers1[1]
+    buttonId.innerText = conversations[0].unserAnswers1[2]*/
+    // give the buttons class and get all those buttons into an array
+// buttons.forEach( (button, i) => button.innerText = conversations[0].unserAnswers1[i] )
+
  }
 
 // MATCH SYSTEM: Open chat window on like button
@@ -527,18 +538,27 @@ function chatWindow() {
     document.querySelector('#chat-window > div > p.age').innerHTML = currentCard.age;
     document.querySelector('#chat-window > div > p.bio').innerHTML = `Bio: ${currentCard.bio}`;
     messages();
-
+    // Update stage tracker to stage 0
+    stage = 0;
+   // if stage is 0, display answer 1.1, 1.2, 1.3 in HTML
+    
 }
 
 // ANSWER MECHANICS
-// Initial Stage gets triggered -- 
-// Pick answer --> show paired reaction
-// Based on reaction stage 2.1, 2.2 or 2.3 gets displayed --> answer button change at this stage
-// Button function checks what stage it is at and changes input
-// Pick answer in stage 2.1, 2.2 or 2.3 
-// Pick answer --> show paired reaction
-// Based on reaction stage 3.1 - 3.9 gets displayed --> answer button changes at this stage
-// Pick answer --> show paired reaction (WIN or LOSE)
+// Initial Conversation 1 gets displayed when matched 
+// Pick answer 1.1, 1.2 or 1.3 --> show paired reaction
+// Based on reaction from Conversation 1, Converstation 2.1, 2.2 or 2.3 gets displayed
+// Buttons now will have new content based on answering options for Conversation 2.1, 2.2 or 2.3
+// Pick answer for conversatation:
+// 2.1 ( answers 2.1.1, 2.1.2, 2.1.3 )
+// 2.2 ( answers 2.2.1, 2.2.2, 2.2.3 )
+// 2.3 ( answers 2.3.1, 2.3.2, 2.3.3 )
+// Based on reaction from Conversation 2.x, one of the conversations 3.1 - 3.9 gets displayed
+// Buttons now will have new content based on answering options for Conversation 3.1 - 3.9
+// Pick answer for Conversation 3.x --> Every conversation from 3.1 - 3.9 has their own 3 answers and paired reactions
+// Pick answer --> show paired reaction --> (WIN OR LOSE)
+// ----
+// 
 
 
 // Answer buttons
@@ -554,6 +574,10 @@ function answer1() {
 
     //document.querySelector('.messages')
     //cardArr[currentCardIndex].answers[0])
+
+    // On click of button, check stage 
+    // Retrieve innerText of button
+    // Map over userAnswers array 
 }
 
 // function answer2() {
