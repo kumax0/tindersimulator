@@ -160,8 +160,8 @@ const cardArr = [
       dateAnswer: 'This is Peter message 3.4 Peter',
       userAnswers: [
         {
-        userAnswer: `I'll let you in my panties if you eat them off...they will be covered in Peanutbutter tho`,
-        dateReaction: 'Sounds tempting🤔 I die for your p****'
+          userAnswer: 'Do you have any allergies?',
+          dateReaction: "Peanuts..why?"
         },
         {
         userAnswer: 'User Answer 3.4.2 Peter',
@@ -177,8 +177,8 @@ const cardArr = [
     dateAnswer: 'This is Peter message 3.5',
     userAnswers: [
       {
-      userAnswer: 'I call that dedication. Okay you get one last chance... Tell me. What did you do on the weekend?',
-      dateReaction: 'Oh that was interesting! I got to watch a squirrel give birth!'
+        userAnswer: `I'll let you in my panties if you eat them off...they will be covered in Peanutbutter tho`,
+        dateReaction: 'Sounds tempting🤔 I die for your p****'
       },
       {
       userAnswer: 'User Answer 3.5.2 Peter',
@@ -194,8 +194,9 @@ const cardArr = [
   dateAnswer: 'This is Peter message 3.6',
   userAnswers: [
     {
-    userAnswer: 'How the heck did that happen? Do you have a pet squirrel?',
-    dateReaction: 'My friend keeps one in a fish tank. We caught another wild one and forced them to have squirrel sex😂😂😂👌👌💯💯'
+      userAnswer: 'I call that dedication. Okay you get one last chance... Tell me. What did you do on the weekend?',
+      dateReaction: 'Oh that was interesting! I got to watch a squirrel give birth!'
+    
     },
     {
     userAnswer: 'User Answer 3.6.2 Peter',
@@ -211,8 +212,9 @@ const cardArr = [
   dateAnswer: 'This is Peter message 3.7',
   userAnswers: [
     {
-    userAnswer: 'OMG what the f*** is wrong with you!?',
-    dateReaction: '5 weeks later she pops out 3 slimey little buggers. The smell ...sheeesh'
+      userAnswer: 'How the heck did that happen? Do you have a pet squirrel?',
+    dateReaction: 'My friend keeps one in a fish tank. We caught another wild one and forced them to have squirrel sex😂😂😂👌👌💯💯'
+   
     },
     {
     userAnswer: 'User Answer 3.7.2 Peter',
@@ -228,8 +230,9 @@ const cardArr = [
   dateAnswer: 'This is Peter message 3.8',
   userAnswers: [
     {
-    userAnswer: `You're disgusting.. I am going to block you now.. Bye`,
-    dateReaction: `too bad.. it doesn't get any better than this on tinder`
+      userAnswer: 'OMG what the f*** is wrong with you!?',
+      dateReaction: '5 weeks later she pops out 3 slimey little buggers. The smell ...sheeesh'
+    
     },
     {
     userAnswer: 'User Answer 3.8.2 Peter',
@@ -245,8 +248,8 @@ const cardArr = [
   dateAnswer: 'This is Peter message 3.9',
   userAnswers: [
     {
-    userAnswer: `User Answer 3.9.1`,
-    dateReaction: 'Date Reaction 3.9.1'
+      userAnswer: `You're disgusting.. I am going to block you now.. Bye`,
+      dateReaction: `too bad.. it doesn't get any better than this on tinder`
     },
     {
     userAnswer: 'User Answer 3.9.2 Peter',
@@ -257,7 +260,24 @@ const cardArr = [
     dateReaction: 'Date Reaction 3.9.3 Peter'
     }
       ] // End of userAnswers 3.9
-    }]}, // End of Profile Peter
+    },
+    { // Peter Conversation 4.0
+      dateAnswer: 'This is Peter message 5.0',
+      userAnswers: [
+        {
+          userAnswer: `User Answer 4.1.1`,
+          dateReaction: `Date Reaction 4.1..1`
+        },
+        {
+        userAnswer: 'User Answer 4.1.2',
+        dateReaction: "Date Reaction 4.1.2"
+        },
+        {
+        userAnswer: 'User Answer 4.1.3',
+        dateReaction: 'Date Reaction 4.1.3 Peter'
+        }
+          ] // End of userAnswers 3.9
+        }]}, // End of Profile Peter
     // Profile Information Alice
     { name: 'Alice',
       age: 44,
